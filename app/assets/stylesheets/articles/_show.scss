@@ -1,0 +1,31 @@
+.article-link {
+  margin: 40px;
+  a {
+    color: white;
+    padding: 15px 60px;
+    background-color: #0C869B;
+    border-radius: 5px;
+    &:hover {
+      text-decoration: none;
+      background-color: rgba(12, 134, 155, 0.8);
+    }
+  }
+}
+
+#btn-gen {
+  background-color: white;
+  border: none;
+  padding: 15px 60px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.38);
+  &:hover {
+   background-color: #0C869B;
+   color: white;
+  }
+}
+
+.gen-msg {
+  margin-top: 30px;
+  font-size: 1.7em;
+  color: grey;
+}

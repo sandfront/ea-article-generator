@@ -1,16 +1,21 @@
-<h1><%= @article.title %></h1>
-<h2><%= @article.author %></h2>
-<%= link_to @article.url %>
+<div class="container">
+  <div class="text-center">
+    <h1><%= @article.title %></h1>
+    <h2><%= @article.author %></h2>
+    <div class="article-link"><%= link_to "Read it!", @article.url %></div>
+    <input id="btn-gen" type="button" onclick="location.href='<%= random_path %>';" value="Another!" />
+    <div class="gen-msg">Or hit the spacebar for another random article!</div>
+  </div>
+</div>
 
-<button id="btn-gen">Click me to get another article</button>
 
 <% content_for(:after_js) do %>
   <script>
   const btn = document.getElementById("btn-gen");
-  btn.addEventListener("click", handleClick);
-
-  const handleClick = () => {
-
+  document.body.onkeyup = function(e){
+      if(e.keyCode == 32){
+        btn.click();
+      }
   }
   </script>
 <% end %>
