@@ -1,0 +1,16 @@
+<h1><%= @article.title %></h1>
+<h2><%= @article.author %></h2>
+<%= link_to @article.url %>
+
+<button id="btn-gen">Click me to get another article</button>
+
+<% content_for(:after_js) do %>
+  <script>
+  const btn = document.getElementById("btn-gen");
+  btn.addEventListener("click", handleClick);
+
+  const handleClick = () => {
+
+  }
+  </script>
+<% end %>

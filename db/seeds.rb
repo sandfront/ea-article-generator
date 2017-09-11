@@ -8,4 +8,6 @@ session = GoogleDrive::Session.from_service_account_key("secrets/client_secret.j
 spreadsheet = session.spreadsheet_by_key("17njnrWd-YQcXNkRJjA6aRmtLkoxyeMeldW6xXB3mEkk").worksheets[0]
 
 # Print out the first 6 columns of each row
-spreadsheet.rows.each { |row| puts row.first(2).join(" | ") }
+spreadsheet.rows.drop(1).take(5).each do |row|
+  p Article.create(title: row[0], author: row[1], url: row[2])
+end
