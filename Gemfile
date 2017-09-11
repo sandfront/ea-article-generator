@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+gem 'google_drive'
 
 group :development, :test do
   gem 'pry-byebug'
