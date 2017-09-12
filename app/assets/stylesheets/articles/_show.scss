@@ -1,17 +1,20 @@
 .container.full-screen-flex {
   display: flex;
-  width 100%;
-  height: calc(100vh - 70px);
-  align-items: center;
+  width: 100%;
+  // height: calc(100vh - 70px);
+  justify-content: space-around;
   min-height: 430px;
+  .content {
+    padding-top: 80px;
+  }
 }
 
-.article-link {
+#article-link {
   margin: 40px;
   a {
     color: white;
     padding: 15px 60px;
-    background-color: #0C869B;
+    background: #0C869B;
     border-radius: 5px;
     &:hover {
       text-decoration: none;
@@ -32,7 +35,7 @@
   }
 }
 
-.gen-msg {
+.gen-msg, .rd-msg {
   margin-top: 30px;
   font-size: 1.7em;
   color: grey;

@@ -1,21 +1,25 @@
 <div class="container full-screen-flex">
-  <div class="text-center">
+  <div class="text-center content">
     <h1><%= @article.title %></h1>
     <h2><%= @article.author %></h2>
-    <div class="article-link"><%= link_to "Read it!", @article.url %></div>
+    <div id="article-link"><%= link_to "Read it!", @article.url, target: "_blank" %></div>
     <input id="btn-gen" type="button" onclick="location.href='<%= random_path %>';" value="Another!" />
-    <div class="gen-msg">or hit the <em>spacebar</em> for another random article!</div>
+<!--     <div class="rd-msg">Hit <em>enter</em> to read!</div>
+ -->    <div class="gen-msg">or hit the <em>spacebar</em> for another random article!</div>
   </div>
 </div>
 
 
 <% content_for(:after_js) do %>
   <script>
-  const btn = document.getElementById("btn-gen");
+  const gen = document.getElementById("btn-gen");
+  const rd = document.getElementById("article-link").firstChild;
   document.body.onkeyup = function(e){
       if(e.keyCode == 32){
-        btn.click();
+        gen.click();
+      // } else if(e.keyCode == 13){
+      //   rd.click();
       }
-  }
+    }
   </script>
 <% end %>
