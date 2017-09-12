@@ -11,8 +11,18 @@
 }
 
 /* Logo */
-.navbar-wagon-brand img {
+.navbar-wagon-brand  {
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
+  img {
   height: 50px;
+  }
+}
+
+.brand-title {
+  font-family: $headings-font-family;
 }
 
 /* User Avatar */

@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container full-screen-flex">
   <div class="text-center">
     <h1><%= @article.title %></h1>
     <h2><%= @article.author %></h2>
     <div class="article-link"><%= link_to "Read it!", @article.url %></div>
     <input id="btn-gen" type="button" onclick="location.href='<%= random_path %>';" value="Another!" />
-    <div class="gen-msg">Or hit the spacebar for another random article!</div>
+    <div class="gen-msg">or hit the spacebar for another random article!</div>
   </div>
 </div>
 

@@ -1,3 +1,10 @@
+.container.full-screen-flex {
+  display: flex;
+  height: calc(100vh - 70px);
+  align-items: center;
+  min-height: 430px;
+}
+
 .article-link {
   margin: 40px;
   a {
