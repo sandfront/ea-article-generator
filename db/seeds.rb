@@ -2,7 +2,7 @@ require 'bundler'
 Bundler.require
 
 # Authenticate a session with your Service Account
-session = GoogleDrive::Session.from_service_account_key(JSON.parse(ENV['GOOGLE_CLIENT_SECRETS'])
+session = GoogleDrive::Session.from_service_account_key(ENV['GOOGLE_CLIENT_SECRETS'])
 
 # Get the spreadsheet by its key. Select first worksheet.
 spreadsheet = session.spreadsheet_by_key("17njnrWd-YQcXNkRJjA6aRmtLkoxyeMeldW6xXB3mEkk").worksheets[0]
