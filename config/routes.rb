@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
   root to: 'articles#random'
-  # resources :articles, only: [:show, :index]
-  # get '/random', to: 'articles#random', as: 'random'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :articles, only: [:index, :show]
 end
