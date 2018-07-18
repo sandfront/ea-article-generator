@@ -5,7 +5,13 @@
   justify-content: space-around;
   min-height: 430px;
   .content {
-    padding-top: 80px;
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .container.full-screen-flex .content {
+      padding-top: 80px;
   }
 }
 

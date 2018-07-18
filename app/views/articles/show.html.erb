@@ -1,11 +1,11 @@
 <div class="container full-screen-flex">
-  <div class="text-center content" style="max-width: 850px">
+  <div class="text-center content" style="max-width: 800px">
     <h1><%= @article.title %></h1>
     <h2><%= @article.author %></h2>
     <div id="article-link"><%= link_to "Read it!", @article.url, target: "_blank" %></div>
     <input id="btn-gen" type="button" onclick="location.href='<%= root_path %>';" value="Another!" />
 <!--     <div class="rd-msg">Hit <em>enter</em> to read!</div>
- -->    <div class="gen-msg">or hit the <em>spacebar</em> for another random article!</div>
+ -->    <div class="gen-msg hidden-xs hidden-sm">or hit the <em>spacebar</em> for another random article!</div>
   </div>
 </div>
 
