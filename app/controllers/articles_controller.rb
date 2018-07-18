@@ -9,6 +9,6 @@ class ArticlesController < ApplicationController
 
   def random
     @article = Article.order("RANDOM()").first
-    render "show"
+    redirect_to @article
   end
 end
