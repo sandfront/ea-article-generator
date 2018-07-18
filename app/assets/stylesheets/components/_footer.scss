@@ -6,8 +6,11 @@
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  position: fixed;
-  bottom: 0;
+  // // hacky way of getting the footer to stay at the bottom of the content and the bottom of the page
+  // @media (min-width: $screen-xs-min) {
+  //   position: fixed;
+  //   bottom: 0;
+  // }
   width: 100%;
 }
 .footer-links {
