@@ -1,15 +1,15 @@
-require 'bundler'
-Bundler.require
+# require 'bundler'
+# Bundler.require
 
-# Authenticate a session with your Service Account
-session = GoogleDrive::Session.from_config('secrets/config.json')
+require 'csv'
+csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
+filepath = 'lib/assets/seeds.csv'
 
-# Get the spreadsheet by its key. Select first worksheet.
-spreadsheet = session.spreadsheet_by_key("17njnrWd-YQcXNkRJjA6aRmtLkoxyeMeldW6xXB3mEkk").worksheets[0]
-
+# Clear old articles
+p "Clearing old articles"
 Article.destroy_all
+p "Cleared!"
 
-# Print out the first 6 columns of each row
-spreadsheet.rows.drop(1).each do |row|
+CSV.foreach(filepath, csv_options) do |row|
   p Article.create(title: row[0], author: row[1], url: row[2])
 end
