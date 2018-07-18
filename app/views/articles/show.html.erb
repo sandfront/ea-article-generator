@@ -1,7 +1,9 @@
+<div class="text-center" style="padding: 20px; background-color: #09090908">
+  <span id="article-link"><%= link_to "Read it!", @article.url, target: "_blank" %></span>
+  <input id="btn-gen" type="button" onclick="location.href='<%= root_path %>';" value="Another!" />
+</div>
 <div class="container full-screen-flex">
   <div class="text-center content" style="max-width: 800px">
-    <span id="article-link"><%= link_to "Read it!", @article.url, target: "_blank" %></span>
-    <input id="btn-gen" type="button" onclick="location.href='<%= root_path %>';" value="Another!" />
     <h1><%= @article.title %></h1>
     <h2><%= @article.author %></h2>
 <!--     <div class="rd-msg">Hit <em>enter</em> to read!</div>
