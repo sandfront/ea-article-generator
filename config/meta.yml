@@ -1,0 +1,4 @@
+meta_product_name: "EA Procrastinator"
+meta_title: "Stumble upon classic EA articles with EA Procrasatinator"
+# meta_description: "Relevant description"
+meta_image: "cover.png"                       # should exist in `app/assets/images/`
